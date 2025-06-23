@@ -1,4 +1,4 @@
-# Diet Planner Web App
+# Diet Planner Web App (Dietura)
 
 A web-based diet planner designed to help users track their meals, monitor their nutrition intake, and achieve their fitness goals. Users can plan their meals for the week, track their daily calorie and protein intake, and visualize progress through easy-to-use dashboards.
 
@@ -22,6 +22,14 @@ A web-based diet planner designed to help users track their meals, monitor their
 ### 4. **Recipe Library**
 - Provides a library of recipes that users can browse through.
 - Each recipe includes detailed nutritional information for each ingredient.
+
+---
+
+## Designs
+
+The Figma design for the Dietura project can be found here:
+
+[Figma - Dietura Project](https://www.figma.com/design/FQNHFI4aBiiko0ifmeoOm1/Dietura-Project?node-id=0-1&t=I0pJz7JSdMEdwkr3-1)
 
 ---
 
