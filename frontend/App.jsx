@@ -8,7 +8,6 @@ import NutritionTracker from './src/pages/NutritionTracker';
 import MealPlanner from './src/pages/MealPlanner';
 import Navigation from './src/components/Navigation';
 import { authService } from './src/services/apiService';
-import './App.css';
 
 function ProtectedRoute({ user, children }) {
   if (user === undefined) {
