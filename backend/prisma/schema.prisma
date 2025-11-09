@@ -57,8 +57,8 @@ model DailyGoal {
 }
 
 model LoggedMeal {
-  id           String   @id @default(uuid())
-  userId       String   @map("user_id")
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId       String   @map("user_id") @db.ObjectId
   name         String
   calories     Float
   protein      Float
@@ -66,12 +66,11 @@ model LoggedMeal {
   fat          Float
   quantity     Float    @default(100) // Current serving size in grams
   baseQuantity Float    @default(100) @map("base_quantity") // Original reference serving size
-  mealDate     DateTime @map("meal_date") @db.Date
+  mealDate     DateTime @map("meal_date")
   loggedAt     DateTime @default(now()) @map("logged_at")
   
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   
-  @@index([userId, mealDate])
   @@map("logged_meals")
 }
 
