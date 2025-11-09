@@ -2,4 +2,7 @@
 frontend/.env
 backend/.env
 .DS_Store
-node_modules/ 
+node_modules/ -e 
+# Environment files
+*.env
+*.env.*
