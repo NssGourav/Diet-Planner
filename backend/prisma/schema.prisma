@@ -90,20 +90,19 @@ model CustomFood {
 }
 
 model PlannedMeal {
-  id           String   @id @default(uuid())
-  userId       String   @map("user_id")
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId       String   @map("user_id") @db.ObjectId
   name         String
   calories     Float?
   protein      Float?
   carbs        Float?
   fat          Float?
-  plannedDate  DateTime @map("planned_date") @db.Date
+  plannedDate  DateTime @map("planned_date")
   mealType     String   @map("meal_type")
   createdAt    DateTime @default(now()) @map("created_at")
   updatedAt    DateTime @updatedAt @map("updated_at")
   
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   
-  @@index([userId, plannedDate])
   @@map("planned_meals")
 }
