@@ -42,8 +42,8 @@ model Meal {
 }
 
 model DailyGoal {
-  id        String   @id @default(uuid())
-  userId    String   @unique @map("user_id")
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String   @unique @map("user_id") @db.ObjectId
   calories  Float
   protein   Float
   carbs     Float
