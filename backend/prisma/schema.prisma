@@ -75,8 +75,8 @@ model LoggedMeal {
 }
 
 model CustomFood {
-  id        String   @id @default(uuid())
-  userId    String   @map("user_id")
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String   @map("user_id") @db.ObjectId
   name      String
   calories  Float
   protein   Float
@@ -86,7 +86,6 @@ model CustomFood {
   
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   
-  @@index([userId])
   @@map("custom_foods")
 }
 
